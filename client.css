@@ -19,13 +19,17 @@
 .image-view{
     position: relative;
     overflow: hidden;
+    height: '50px';
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 
 .image-view img {
-    display: block;
+
     width: 100%;
-    height: auto;
+
     transition: transform 0.3s ease-in-out;
     /*Smoothtransitionformagnificationeffect*/border-radius: 12px;
     -webkit-border-radius: 30px;

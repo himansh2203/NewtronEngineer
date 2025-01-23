@@ -83,7 +83,7 @@
             <p> Website : www.newtronengineers.com
                </p>    
         </div>
-        <div class="contactUs2">
+        <!-- <div class="contactUs2">
             <h2 >Enquiry Form </h2>
             <form action="contactUs.php" method="post">
                 <label for="name">Name:</label><br>
@@ -95,6 +95,27 @@
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message" required></textarea><br>
                 <center><input type="submit" value="Submit"></center>
+            </form>
+        </div> -->
+        <div class="form-container">
+            <h2>Enquiry Form</h2>
+            <form id="enquiry-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+                <div id="response-message"></div>
             </form>
         </div>
     </div>
@@ -110,10 +131,8 @@
         <div class="inner-footer1">
             <p><a href="./home.html">Home </a></p>
             <p><a href="./aboutUs.html">About Us </a></p>
-            <p><a href="./cranes.html">Cranes </a></p>
             <p><a href="./materialHandeling.html">Material Handeling Equipments </a></p>
             <p><a href="./craneControlling.html">Cranes Controlling Equipmemnts </a></p>
-            <p><a href="./hoists.html">Hoists </a></p>
             <p><a href="./service.html">Services </a></p>
             <p><a href="./client.html">Client </a></p>
             <p><a href="./gallery.html">Gallery </a></p>
@@ -124,5 +143,40 @@
         </div>
     </div>
     <script src="./home.js"></script>
+    
+<script>
+    document.getElementById('enquiry-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const responseMessage = document.getElementById('response-message');
+        responseMessage.innerHTML = '';
+
+        try {
+            alert("Form Submitted");
+            const response = await fetch('http://localhost:5298/api/enquiry', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                responseMessage.innerHTML = `<p class="success-message">${result.message}</p>`;
+                document.getElementById('enquiry-form').reset();
+            } else {
+                responseMessage.innerHTML = `<p class="error-message">${result.message || 'Something went wrong!'}</p>`;
+            }
+        } catch (error) {
+            responseMessage.innerHTML = `<p class="error-message">Failed to submit the form. Please try again later.</p>`;
+        }
+    });
+</script>
 </body>
 </html>

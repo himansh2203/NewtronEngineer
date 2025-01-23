@@ -1,0 +1,23 @@
+.left_content{
+    background-color: beige;
+    padding:3rem 20rem;
+    word-spacing: 1px;
+    font-weight: 500;
+    color:brown
+}
+
+.left_content{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease-out;
+    -webkit-transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease-out;
+    -moz-transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease-out;
+    -ms-transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease-out;
+    -o-transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+.left_content.visible {
+    opacity: 1;
+    transform: translateY(0);
+    background-color:beige; /* Highlight color */
+}
