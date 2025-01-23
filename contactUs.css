@@ -1,0 +1,44 @@
+.contactUs{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.contactUs h1{
+    font-size: 3rem;
+    color: #333;
+}
+
+.contactUs p{
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.contactUs2{
+    background-color:lightgrey;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.map {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.map a {
+    color: blue;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.map a:hover {
+    color: darkblue;
+}

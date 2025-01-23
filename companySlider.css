@@ -1,0 +1,30 @@
+
+
+.companySlider {
+    overflow: hidden;
+    width: 80%; /* Adjust the width of the slider */
+    height: 300px; /* Adjust the height of the slider */
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: calc(200%); /* Adjust based on duplicate images */
+    animation: scroll 20s linear infinite; /* Adjust speed with duration */
+}
+
+.slider img {
+    width: 12.5%; /* 100% / 8 images */
+    flex-shrink: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
