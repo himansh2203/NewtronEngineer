@@ -1,3 +1,5 @@
+/*
+
 .gc{
     background-color: #f8f9fa;
     color: #343a40;
@@ -142,4 +144,49 @@
     100% {
         transform: translateX(-100%);
     }
+}
+
+*/
+
+
+/*
+
+.product-image .product-image1 {
+    display: flex;
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+*/
+
+.body-div-im{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+}
+
+.eot-Content{
+    justify-content: center;
+    align-items: center;
+    padding: 5rem  20rem 5rem
+}
+
+#sg1{
+    width: 100%;
+    height: 200px;
+    padding:0.5rem;
+}
+
+#sg2{
+    width: 100%;
+    height: 100px;
+    padding: 0.5rem;
+}
+#sg3{
+    width: 100%;
+    height: 150px;
+    padding:0.5rem
 }

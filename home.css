@@ -37,7 +37,8 @@ body {
     align-items: center;
     font-weight: 900;
     background-color:black;
-    padding: 1rem;
+    padding: 14px 20px;
+    width: 100%;
 }
 
 .call{
@@ -50,13 +51,14 @@ body {
     display: flex;
     justify-content: center;
     padding: 20rem;
-    background-image: url(/testImg.jpg);
+    background-image: url(./f21.jpeg);
 }
 
 .WlcmNE{
     display: grid;
     justify-content: center;
     padding: 5rem 20rem;
+    
 }
 
 .readMorebtn{
@@ -90,6 +92,10 @@ body {
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
+}
+
+#img-front{
+    height: 250px;
 }
 
 .slider{
@@ -230,7 +236,7 @@ body {
     background-color: #333;
     color: white;
     padding: 14px 20px;
-    font-size: 16px;
+    font-size: 14px;
     border: none;
     cursor: pointer;
 }
@@ -269,3 +275,10 @@ body {
     border-top: 1px solid #ccc;
     background-color: #ddd;
 }
+
+#why{
+    color: brown;
+}
+
+
+

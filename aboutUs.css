@@ -37,7 +37,7 @@ body {
     align-items: center;
     font-weight: 900;
     background-color:black;
-    padding: 1rem;
+    padding: 14px 20px;
 }
 
 .call{
@@ -50,7 +50,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 20rem;
-    background-image: url(/testImg.jpg);
+    background-image: url(/f11.jpeg);
 }
 
 
@@ -62,12 +62,7 @@ body {
     font-size: 3rem;
 }
 
-.p1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
-}
+
 
 .slider{
     display: flex;
@@ -92,35 +87,7 @@ body {
     font-weight: bolder;
 }
 
-.p01 {
-    font-weight: 700;
-    color: brown;
-    padding: 0.5rem 3rem;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%; /* Make the box cover the full width */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    transition: transform 0.3s, box-shadow 0.3s;
-    flex: 0 0 auto; /* Prevent cards from shrinking */
-}
 
-.p01:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-color: #f0f0f0; /* Highlight color */
-}
-
-.p1 {
-    display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping to keep cards in a single row */
-    gap: 20px;
-    justify-content: center; /* Center the cards horizontally */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-    padding: 20px;
-}
 
 
 .navBar {
@@ -265,4 +232,8 @@ body {
 .footer{
     border-top: 1px solid #ccc;
     background-color: #ddd;
+}
+
+#why{
+    color: brown;
 }
