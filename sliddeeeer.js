@@ -1,3 +1,10 @@
+// JavaScript Document
+/***********************************************
+* Conveyor belt slideshow script- Â© Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
 
 //Specify the slider's width (in pixels)
 var sliderwidth="980px"
@@ -11,10 +18,23 @@ slidebgcolor=""
 //Specify the slider's images
 var leftrightslide=new Array()
 var finalslide=''
-leftrightslide[0]='<a href="#"><img src="./s1(new).jpg"></a>'
-leftrightslide[1]='<a href="#"><img src="./cmp2.jpg"></a>'
-leftrightslide[2]='<a href="#"><img src="./s1(new).jpg"></a>'
-
+leftrightslide[0]='<a href="#"><img src="./apco.jfif"></a>'
+leftrightslide[1]='<a href="#"><img src="./simplex.png"></a>'
+leftrightslide[2]='<a href="#"><img src="./LNT.jfif"></a>'
+leftrightslide[3]='<a href="#"><img src="./DMRC.jfif"></a>'
+leftrightslide[4]='<a href="#"><img src="./tata.png"></a>'
+leftrightslide[5]='<a href="#"><img src="./jal.jpg"></a>'
+leftrightslide[6]='<a href="#"><img src="./harghrjal.jfif"></a>'
+leftrightslide[7]='<a href="#"><img src="./ijm.png"></a>'
+leftrightslide[8]='<a href="#"><img src="./ideb.png"></a>'
+leftrightslide[9]='<a href="#"><img src="./vij.png"></a>'
+leftrightslide[10]='<a href="#"><img src="./hcc.png"></a>'
+leftrightslide[11]='<a href="#"><img src="./continental.jfif"></a>'
+eftrightslide[12]='<a href="#"><img src="./spsingla.jfif"></a>'
+leftrightslide[13]='<a href="#"><img src="./chetak.jfif"></a>'
+leftrightslide[14]='<a href="#"><img src="./cem.jfif"></a>'
+leftrightslide[15]='<a href="#"><img src="./gammon.png"></a>'
+ 
 //Specify gap between each image (use HTML):
 var imagegap=" "
 

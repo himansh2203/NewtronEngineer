@@ -3,7 +3,6 @@
     padding:3rem 20rem;
     word-spacing: 1px;
     font-weight: 500;
-    color:brown
 }
 
 .left_content{
@@ -20,4 +19,8 @@
     opacity: 1;
     transform: translateY(0);
     background-color:beige; /* Highlight color */
+}
+
+#why{
+    color: brown;
 }
