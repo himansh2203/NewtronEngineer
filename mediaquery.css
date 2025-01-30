@@ -1,0 +1,150 @@
+
+/* Media Queries */
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .color-brown {
+        color: darkred;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navBar, .footer {
+        display: none;
+    }
+
+    .header, .content, .footer {
+        padding: 10px;
+        font-size: 2px;
+    }
+
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slider {
+        margin: 10px 0;
+    }
+
+    .footer {
+        padding: 8px 0;
+    }
+    .WlcmNE{
+        font-size: xx-small;
+    }
+}
+
+/* Medium devices (tablets, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .color-brown {
+        color: sienna;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navBar {
+        width: 100%;
+        font-size: xx-small;
+    }   
+
+    .header, .content {
+        padding: 8px;
+        font-size: small;
+    }
+
+    .footer{
+        font-size: 3px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 9px;
+    }
+
+    button {
+        padding: 6px 12px;
+    }
+
+
+    .slider {
+        margin: 15px 0;
+    }
+
+    .footer {
+        padding: 2px 0;
+    }
+
+    .four-img{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #img-front{
+        width: inherit;
+    }
+
+    .WlcmNE{
+        font-size: xx-small;
+    }
+
+
+}
+
+@media only screen and (max-width: 1070px) {
+
+    .navBar{
+        font-size: x-small ;
+    }
+
+    #img-front{
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .readMorebtn{
+        width: 10rem;
+        margin-left: 2rem;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+}
+}
+
+@media only screen and (max-width: 1350px){
+    #img-front{
+        width: 250px;
+    }
+} 
