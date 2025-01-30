@@ -305,8 +305,8 @@ body {
 .slider-container{
     display: flex;
     width:calc(10px * 18);
-    animation:scroll 20s linear infinite;
-    -webkit-animation:scroll 20s linear infinite;
+    animation:scroll 40s linear infinite;
+    -webkit-animation:scroll 40s linear infinite;
 }
 
 .slider-container:hover{
@@ -319,11 +319,11 @@ body {
         transform: translateX(0);
     }
     100%{
-        transform: translateX(calc(-250px * 5));
-        -webkit-transform: translateX(calc(-250px * 5));
-        -moz-transform: translateX(calc(-250px * 5));
-        -ms-transform: translateX(calc(-250px * 5));
-        -o-transform: translateX(calc(-250px * 5));
+        transform: translateX(calc(-250px * 20));
+        -webkit-transform: translateX(calc(-250px * 20));
+        -moz-transform: translateX(calc(-250px * 20));
+        -ms-transform: translateX(calc(-250px * 20));
+        -o-transform: translateX(calc(-250px * 20));
 }
 }
 
