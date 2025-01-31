@@ -55,6 +55,11 @@ body {
         flex-direction: column;
     }
 
+    #Iconcll{
+        width: 20px;
+    }
+
+
     .head1 {
         margin: 5px 0;
 
@@ -187,7 +192,6 @@ body {
         font-size: 2.5rem;
     }
 
-    
 
     .content {
         padding: 20px;
