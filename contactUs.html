@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="home.css" rel="stylesheet" />
     <link href="contactUs.css" rel="stylesheet" />
-    <script src="./sliderHome.js" defer></script>
+    <script src="./server.js" defer></script>
     <script src ="./home.js"></script>
     <title>Newtron Engineers</title>
     <link rel="icon" type="image/x-icon" href="./iconCompany.ico">
@@ -29,7 +29,7 @@
               </div>
               <div class="call">
                   <a href="https://www.flaticon.com/free-icons/phone" title="phone icons"><img src="./call.png" height="20"></a>
-                  <p>8700370166 </p>
+                  <p>8447675912 </p>
               </div>
           </div>
       </div>
@@ -82,8 +82,8 @@
     <div class="contactUs">
         <div class="contactUs1">
             <h2>Contact Us</h2>
-            <p>Newtron Engineers, Sector 59, Faridabad, Haryana ,121004</p>
-            <p>Phone: 9899474900, 8700370166</p>
+            <p>Newtron Engineers, Plot no-88, Sector 59, Faridabad, Haryana ,121004</p>
+            <p>Phone: 9899474900, 8447675912</p>
             <p> E-Mail: newtron.eng@gmail.com
                 . nutan.inds@gmail.com</p>
             <p> Website : www.newtronengineers.com
@@ -105,8 +105,11 @@
                     <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                 </div>
                 <div class="form-group">
-                    <button type="submit">Submit</button>
+                    <!-- <button type="submit">Submit</button> -->
+                    <button type="button" value="button" onclick="sendEmail()">Submit</button>
                 </div>
+                
+
                 <div id="response-message"></div>
             </form>
         </div>
@@ -175,40 +178,31 @@
     </div>
     <script src="./home.js"></script>
     
-<script>
-    document.getElementById('enquiry-form').addEventListener('submit', async function(event) {
-        event.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        const responseMessage = document.getElementById('response-message');
-        responseMessage.innerHTML = '';
-
-        try {
-            alert("Form Submitted");
-            const response = await fetch('http://localhost:5298/api/enquiry', {
-                method: 'POST',
+    <script>
+        function sendEmail() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            console.log('hello')
+            fetch("http://localhost:5000/send-email", {
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ name, email, message })
-            });
-
-            const result = await response.json();
-            debugger;
-
-            if (response.ok) {
-                responseMessage.innerHTML = `<p class="success-message">${result.message}</p>`;
-                document.getElementById('enquiry-form').reset();
-            } else {
-                responseMessage.innerHTML = `<p class="error-message">${result.message || 'Something went wrong!'}</p>`;
-            }
-        } catch (error) {
-            responseMessage.innerHTML = `<p class="error-message">Failed to submit the form. Please try again later.</p>`;
+                body: JSON.stringify({
+                    to: "newtronengineers@gmail.com", // Replace with recipient email
+                    subject: `New Message from ${name}`,
+                    body: `From: ${email}\n\n${message}`
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("response-message").innerHTML = data.message;
+                alert(data.message);
+            })
+            .catch(error => console.error("Error:", error));
         }
-    });
-</script>
+    </script>
+    
 </body>
 </html>

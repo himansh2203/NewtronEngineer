@@ -249,11 +249,10 @@ body {
     height: 180px;
     margin:auto;
     position:relative;
-    width:100%;
-    display :grid;
+    width:90%;
+    display:grid;
     place-items: center;
     overflow: hidden;
-
 }
 .slider-container{
     display: flex;

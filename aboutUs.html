@@ -6,7 +6,7 @@
     <link href="aboutUs.css" rel="stylesheet" />
     <link href="gantry.css" rel="stylesheet" />
     <link href="contactUs.css" rel="stylesheet" />
-    <script src="./sliderHome.js" defer></script>
+    <script src="./express/server.js" defer></script>
     <title>Newtron Engineers</title>
     <link rel="icon" type="image/x-icon" href="./iconCompany.ico">
 </head>
@@ -97,7 +97,7 @@
                     <strong id="why">Leadership:</strong>
                    </ol>
                    <li>Mr. Pramod Kumar Singh </li>
-                   <li>Mr. Sandeep Kumar</li>
+                   <li>Mr. Saurabh Kumar Singh  </li>
 
                    <br>
                    <ol>
@@ -151,7 +151,7 @@
                             <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit">Submit</button>
+                            <button type="button" value="button" onclick="sendEmail()">Submit</button>
                         </div>
                         <div id="response-message"></div>
                     </form>
@@ -220,45 +220,37 @@
             All rights reserved to :<a href="./index.html" id="why">Newtron Engineers</a> 
         </div>
     </div>
-    <script>
+  <script>
         // JavaScript function to handle redirection
         function redirectToAbout() {
             window.location.href = "./aboutUs.html";
         }
-    </script>
+   </script>
+
 <script>
-    document.getElementById('enquiry-form').addEventListener('submit', async function(event) {
-        event.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        const responseMessage = document.getElementById('response-message');
-        responseMessage.innerHTML = '';
-
-        try {
-            alert("Form Submitted");
-            const response = await fetch('http://localhost:5298/api/enquiry', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, email, message })
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                responseMessage.innerHTML = `<p class="success-message">${result.message}</p>`;
-                document.getElementById('enquiry-form').reset();
-            } else {
-                responseMessage.innerHTML = `<p class="error-message">${result.message || 'Something went wrong!'}</p>`;
-            }
-        } catch (error) {
-            responseMessage.innerHTML = `<p class="error-message">Failed to submit the form. Please try again later.</p>`;
-        }
-    });
+    function sendEmail() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+        console.log('hello')
+        fetch("http://localhost:5000/send-email", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                to: "newtronengineers@gmail.com", // Replace with recipient email
+                subject: `New Message from ${name}`,
+                body: `From: ${email}\n\n${message}`
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("response-message").innerHTML = data.message;
+            alert(data.message);
+        })
+        .catch(error => console.error("Error:", error));
+    }
 </script>
 
 </body>
