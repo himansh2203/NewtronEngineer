@@ -13,8 +13,8 @@ const transporter = nodemailer.createTransport({
     port: 465, // Use 465 for SSL
     secure: true,
     auth: {
-        user: "newtronengineers@gmail.com",  // Replace with your Gmail
-        pass: "dmchbvgxmwkemmby"      // Replace with your Gmail App Password
+        user: "newtron.eng@gmail.com",  // Replace with your Gmail
+        pass: "njzpgrkbdwhfymrz"      // Replace with your Gmail App Password
     }
 });
 
@@ -24,7 +24,7 @@ app.post("/send-email", async (req, res) => {
 
     try {
         let info = await transporter.sendMail({
-            from: 'newtronengineers@gmail.com',
+            from: 'newtron.eng@gmail.com',
             to: to,
             subject: subject,
             text: body
