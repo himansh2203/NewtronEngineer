@@ -1,150 +1,199 @@
+/* Base styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color:#ffff ;
+    color:#333;
+    padding: 20px;
+    text-align: center;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head1 {
+    margin: 0 10px;
+}
+
+.head1 img {
+    max-width: 100px;
+    height: auto;
+}
+
+.content {
+    padding: 20px;
+}
+
+.footer {
+    background-color:#ffff ;
+    color:#333;
+    text-align: center;
+    padding: 10px 0;
+}
 
 /* Media Queries */
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-
-    .color-brown {
-        color: darkred;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .navBar, .footer {
-        display: none;
-    }
-
-    .header, .content, .footer {
+    .header {
         padding: 10px;
-        font-size: 2px;
+        width: 800px;
+    }
+    body{
+        width: 850px;
+        }
+    .heading {
+        flex-direction: column;
     }
 
+    .head1 {
+        margin: 5px 0;
 
-    .form-group {
-        margin-bottom: 10px;
     }
 
-    textarea {
-        width: 100%;
-        padding: 8px;
+    .head1 img {
+        max-width: 80px;
     }
 
-    button {
-        padding: 8px 16px;
+    .head1 h1 {
+        font-size: 1.5rem;
     }
 
-    img {
-        width: 100%;
-        height: auto;
+    .navBar1 ,.navBar2, .navBar3, .navBar6 ,.navBar7 ,.navBar8 ,.navBar9, .navBar10{
+        font-size: xx-small;
+    }    
+
+
+    .dropbtn{
+        font-size: xx-small;
     }
 
-    .slider {
-        margin: 10px 0;
+    .content {
+        padding: 10px;
     }
 
     .footer {
         padding: 8px 0;
     }
-    .WlcmNE{
-        font-size: xx-small;
+
+    .inner-footer1{
+        padding: 1rem 1rem;
+        margin-top: 50px ;
+        display: flex;
+    }
+
+    .inner-footer2{
+        margin: 100px;
+    }
+
+    .readMorebtn{
+        width: 100px;
+    }
+
+
+    .footer-content {
+        flex-direction: column;;
+    }
+
+    .footer-content p {
+        margin: 5px 0;
     }
 }
 
 /* Medium devices (tablets, 600px to 768px) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-    body {
-        font-size: 16px;
+    .header {
+        padding: 15px;
     }
 
-    .color-brown {
-        color: sienna;
+    .heading {
+        flex-direction: row;
     }
 
-    .menu-icon {
-        display: block;
+    body{
+        width: 900px;
     }
 
-    .navBar {
-        width: 100%;
+    .head1 {
+        margin: 10px;
+    }
+
+    .head1 img {
+        max-width: 90px;
+    }
+
+    .head1 h1 {
+        font-size: 2rem;
+    }
+
+    .navBar1 ,.navBar2, .navBar3, .navBar6 ,.navBar7 ,.navBar8 ,.navBar9, .navBar10{
         font-size: xx-small;
-    }   
+    }    
 
-    .header, .content {
-        padding: 8px;
-        font-size: small;
+    .dropbtn{
+        font-size: xx-small;
     }
 
-    .footer{
-        font-size: 3px;
+    .inner-footer1{
+        padding: 1rem 1rem;
+        margin-top: 50px ;
+        display: flex;
     }
 
-    .form-group {
-        margin-bottom: 12px;
+    .inner-footer2{
+        margin: 50px;
     }
 
-    textarea {
-        width: 100%;
-        padding: 9px;
+    .readMorebtn{
+        width: 100px;
     }
-
-    button {
-        padding: 6px 12px;
-    }
-
-
-    .slider {
-        margin: 15px 0;
+    .content {
+        padding: 15px;
     }
 
     .footer {
-        padding: 2px 0;
+        padding: 9px 0;
     }
-
-    .four-img{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #img-front{
-        width: inherit;
-    }
-
-    .WlcmNE{
-        font-size: xx-small;
-    }
-
-
 }
 
-@media only screen and (max-width: 1070px) {
-
-    .navBar{
-        font-size: x-small ;
+/* Large devices (desktops, 769px and up) */
+@media only screen and (min-width: 769px) {
+    .header {
+        padding: 20px;
     }
 
-    #img-front{
-        width: 100%;
-        padding: 1rem;
+    .heading {
+        flex-direction: row;
     }
+
+    .head1 {
+        margin: 10px;
+    }
+
+    .head1 img {
+        max-width: 100px;
+    }
+
+    .head1 h1 {
+        font-size: 2.5rem;
+    }
+
     
-    .readMorebtn{
-        width: 10rem;
-        margin-left: 2rem;
-        border-radius: 1rem;
-        -webkit-border-radius: 1rem;
-        -moz-border-radius: 1rem;
-        -ms-border-radius: 1rem;
-        -o-border-radius: 1rem;
-}
-}
 
-@media only screen and (max-width: 1350px){
-    #img-front{
-        width: 250px;
+    .content {
+        padding: 20px;
     }
-} 
+
+    .footer {
+        padding: 10px 0;
+    }
+}
